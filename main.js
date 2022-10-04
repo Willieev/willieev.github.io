@@ -42,5 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
       renderer.render(scene, camera);
     });
   }
-  start();
+
+  const startButton = document.createElement("button");
+  startButton.textContent = "Tap To Scan";
+  startButton.addEventListener("click", start);
+  document.body.appendChild(startButton);
+
+
+  //start();
 });
