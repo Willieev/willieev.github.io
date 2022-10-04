@@ -48,6 +48,17 @@ document.addEventListener('DOMContentLoaded', () => {
   startButton.addEventListener("click", start);
   document.body.appendChild(startButton);
 
+  startButton.style.position = "absolute";
+  startButton.style.left = "50%";
+  startButton.style.transform = "translateX(-50%)";
+  startButton.style.transform = "translateY(100%)";
+
+  startButton.style.width = '200px'; // setting the width to 200px
+  startButton.style.height = '200px'; // setting the height to 200px
+  startButton.style.background = 'black'; // setting the background color to teal
+  startButton.style.color = 'white'; // setting the color to white
+  startButton.style.fontSize = '20px'; // setting the font size to 20px
+
 
   //start();
   //
