@@ -1,26 +1,27 @@
-import {loadGLTF, loadVideo} from "../../Cork/libs/loader.js";
+import {loadGLTF, loadVideo} from "../../p-locke-forever/libs/loader.js";
 //import {mockWithVideo} from '../../libs/camera-mock.js';
-import {createChromaMaterial} from '../../Cork/libs/chroma-video.js';
+import {createChromaMaterial} from '../../p-locke-forever/libs/chroma-video.js';
 
 const THREE = window.MINDAR.IMAGE.THREE;
 
 document.addEventListener('DOMContentLoaded', () => {
   const start = async() => {
-    //mockWithVideo('../../Cork/assets/mock-videos/course-banner1.mp4');
+    //mockWithVideo('../../p-locke-forever/assets/mock-videos/course-banner1.mp4');
     
     const mindarThree = new window.MINDAR.IMAGE.MindARThree({
       container: document.body,
-      imageTargetSrc: '../../Cork/assets/targets/Cork Target.mind',
+      imageTargetSrc: '../../p-locke-forever/assets/targets/TherapyPoster.mind',
     });
     const {renderer, scene, camera} = mindarThree;
 
-    const video = await loadVideo("../../Cork/assets/videos/Cork Video.mp4");
+    const video = await loadVideo("../../p-locke-forever/assets/videos/therapy.mp4");
     video.play();
     video.pause();
     const texture = new THREE.VideoTexture(video);
 
     const geometry = new THREE.PlaneGeometry(1, 1080/1920);
-    const material = new THREE.MeshBasicMaterial({map: texture});
+    //const material = new THREE.MeshBasicMaterial({map: texture});
+    const material = createChromaMaterial(texture, 0x00ff00);
     const plane = new THREE.Mesh(geometry, material);
     //plane.rotation.x = Math.PI/2;
     //plane.position.y = 0.7;
