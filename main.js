@@ -50,8 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   startButton.style.position = "absolute";
   startButton.style.left = "50%";
-  startButton.style.transform = "translateX(-51%)";
-  startButton.style.transform = "translateY(100%)";
+  startButton.style.transform = "translateX(-50%)";
 
   startButton.style.width = '200px'; // setting the width to 200px
   startButton.style.height = '200px'; // setting the height to 200px
