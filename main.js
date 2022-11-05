@@ -46,16 +46,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const startButton = document.createElement("button");
   startButton.textContent = "Tap To Scan";
   startButton.addEventListener("click", start);
+
+  startButton.addEventListener("click", function() {
+		startButton.hidden = true;
+	});
+
   document.body.appendChild(startButton);
 
   startButton.style.position = "absolute";
   startButton.style.left = "50%";
   startButton.style.transform = "translateX(-50%)";
-  startButton.style.transform = "translateY(100%)";
+  //startButton.style.transform = "translateY(100%)";
+  //startButton.style.transform = "translateY(80%)";
 
   startButton.style.width = '200px'; // setting the width to 200px
   startButton.style.height = '200px'; // setting the height to 200px
-  startButton.style.background = 'black'; // setting the background color to teal
+  startButton.style.background = 'black'; // setting the background color to black
   startButton.style.color = 'white'; // setting the color to white
   startButton.style.fontSize = '20px'; // setting the font size to 20px
 
